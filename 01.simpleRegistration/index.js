@@ -1,3 +1,5 @@
+// ? 6th Example
+// TODO using elements on the page 
 const { Builder, By, } = require("selenium-webdriver");
 
 const driver = new Builder()
@@ -16,7 +18,28 @@ async function simpleRegistration() {
 }
 simpleRegistration();
 
-// ? How to wait for tasks to finish - open yahoo and then google 
+// ? 5th Example 
+// TODO create a Proxy in firefox
+// const { Builder } = require("selenium-webdriver");
+// const firefox = require("selenium-webdriver/firefox");
+// const proxy = require("selenium-webdriver/proxy");
+// const options = new firefox.Options();
+// options.setProfile("./SeleniumTest");
+// const proxyServer = "place proxy ip address here from free proxy ip website";
+
+// const driver = new Builder()
+//     .forBrowser("firefox")
+//     .setFirefoxOptions(options)
+//     .setProxy(proxy.manual({
+//         http: proxyServer,
+//         https: proxyServer
+//     }))
+//     .Build();
+
+// driver.get("https://whatismyipaddress.com/")
+    
+// ? 2nd and 6th Example
+// TODO Use elements on a page and async await => Promise 
 // const { Builder } = require("selenium-webdriver");
 // const driver = new Builder()
 //     .forBrowser("firefox")
@@ -32,7 +55,9 @@ simpleRegistration();
 // }
 // openWebsites();
 
-// ? Builds the selenium webdriver for us
+// ? 4th Example
+// TODO set custom firefox profile 
+// TODO Build the selenium webdriver for us
 // const { Builder } = require("selenium-webdriver");
 // const firefox = require("selenium-webdriver/firefox");
 // const options = new firefox.Options();
@@ -46,25 +71,28 @@ simpleRegistration();
 
 // driver.get("http://google.com");
 
-// ? Open browser and google and webpage
+// ? 1st example
+// TODO Open browser, and google webpage
 // const { Builder, By, Key, util } = require("selenium-webdriver");
 // async function example() {
     // ? build the firefox browser, open google 
     // let driver = await new Builder().forBrowser("firefox").build();
     // await driver.get("http://google.com");
-    // ?find name "q" = question sendKeys = search word is Selenium hit RETURN 
+    // ?find name "q" = is question on the google page sendKeys = search word is Selenium hit ENTER or RETURN 
 //     await driver.findElement(By.name("q")).sendKeys("Selenium", Key.RETURN);
 // }
 // example();
 
-// ? below is for auto saving file types the file is an excel sheet
-// ? go to inspect to specify application/< type >
+// ? 3rd Example
+// TODO below is for auto saving file types the file is an excel sheet
+// TODO go to inspect to specify application/< type >
 // const { Builder } = require("selenium-webdriver");
 // const firefox = require("selenium-webdriver/firefox");
 // const options = new firefox.Options();
+
 // options.setPreference("browser.download.dir", "C:\\mySeleniumDownloads");
 // options.setPreference("browser.download.folderList", 2);
-// ? set file types separate with a comma after the x-csv
+// ? set file types separate with a comma after the x-csv. x-csv is a content type
 // options.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/x-csv");
 
 // const driver = new Builder().forBrowser("firefox").setFirefoxOptions(options).build();
